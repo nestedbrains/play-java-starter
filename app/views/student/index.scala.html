@@ -1,0 +1,18 @@
+@(students : Set[Student])
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>All Student</h1>
+
+        @for(student <-  students) {
+            <a href="#">@student.name</a>
+            <p >Department : @student.depertment</p>
+            <a >Address : @student.address</a>
+        }
+    </body>
+</html>

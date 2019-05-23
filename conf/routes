@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET         /                          controllers.HomeController.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file              controllers.Assets.versioned(path="/public", file: Asset)
+
+GET         /student/all               controllers.StudentController.index()
+GET         /student/create            controllers.StudentController.create()
+POST        /student/save              controllers.StudentController.save()
+GET         /student/show/:id          controllers.StudentController.show(id: Integer)
+GET         /student/edit/:id          controllers.StudentController.edit(id: Integer)
+POST        /student/update            controllers.StudentController.update()
+GET         /student/delete/:id        controllers.StudentController.delete(id: Integer)
