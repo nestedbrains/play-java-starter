@@ -13,6 +13,7 @@
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
+              <option name="sourceDir" value="F:\Play\play-java-starter\app" />
               <option name="confDir" value="F:\Play\play-java-starter\app" />
               <option name="templateImports">
                 <list>

@@ -1,6 +1,4 @@
-@(students : Set[Student])
-
-
+@(students: Set[Student])
 <!doctype html>
 <html lang="en">
     <head>
@@ -8,11 +6,20 @@
     </head>
     <body>
         <h1>All Student</h1>
-
-        @for(student <-  students) {
-            <a href="#">@student.name</a>
-            <p >Department : @student.depertment</p>
-            <a >Address : @student.address</a>
-        }
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Address</th>
+            </tr>
+            @for(student <- students) {
+                <tbody>
+                    <td> <a href="#">@student.name</a></td>
+                    <td>@student.department</td>
+                    <td>@student.department</td>
+                    <td>@student.address</td>
+                </tbody>
+            }
+        </table>
     </body>
 </html>

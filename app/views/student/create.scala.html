@@ -1,0 +1,20 @@
+@(studentForm: Form[Student])
+@import helper._
+<!doctype html>
+<html lang="en">
+    <head>
+            <title>Create Student</title>
+    </head>
+    <body>
+        <h1>Create Student</h1>
+
+        @helper.form(action = routes.StudentController.save()){
+            @helper.inputText(studentForm("id"))
+            @helper.inputText(studentForm("name"))
+            @helper.inputText(studentForm("department"))
+            @helper.inputText(studentForm("address"))
+
+            <input type="submit" value="Save Student">
+        }
+    </body>
+</html>
